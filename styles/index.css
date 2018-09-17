@@ -1,0 +1,30 @@
+.text-custom {
+    color: #0A7E00;
+    display: block;
+}
+
+.form-control{
+    display: inline-block;
+    width: 50%;
+}
+.none-border {
+    border: none;
+}
+input[type="range" i] {
+    color: rgb(71, 196, 50);
+}
+
+.card-body{
+    padding: 0;
+    background: lightgray;
+}
+
+.card-body--grey{
+    background: lightgray;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+

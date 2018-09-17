@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"-->
+          <!--crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>İhtiyaç Kredisi Hesaplama</title>
+</head>
+<body>
+<div class="container mx-auto">
+
+    <div class="card">
+        <div class="card-header">
+            <h5>İhtiyaç kredisi Hesapla</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 bg-white p-4">
+                    <form >
+                        <div class="form-group">
+                            <label class="text-custom">Kredi Tutarı</label>
+                            <input type="number"
+                                   step="any"
+                                   class="form-control"
+                                   id="kredi-tutari" value="20000">
+                            <small class="text-secondary">&nbsp;&nbsp;TL kredi istiyorum.</small>
+                            <input type="range"
+                                   class="form-control-range my-4 custom-range"
+                                   id="kredi-aralik"
+                                   value="20000"
+                                   min="1000"
+                                   max="100000"
+                                   step="500">
+                            <div class="d-flex justify-content-between">
+                                <small class="text-secondary">1.000 TL</small>
+                                <small class="text-secondary">100.000 TL</small>
+                            </div>
+
+                        </div>
+                        <div class="kredi-hata">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="text-custom">Taksit Sayısı</label>
+                            <input type="number"
+                                   class="form-control"
+                                   value="36"
+                                   id="taksit-sayisi">
+                            <small class="text-secondary">&nbsp;&nbsp;ayda ödeyebilirim.</small>
+                            <input type="range"
+                                   class="form-control-range my-4 custom-range"
+                                   min="3"
+                                   value="36"
+                                   id="taksit-aralik"
+                                   max="36"
+                                   step="1">
+                            <div class="d-flex justify-content-between">
+                                <small class="text-secondary">3 Ay</small>
+                                <small class="text-secondary">36 Ay</small>
+                            </div>
+                        </div>
+                        <div class="taksit-hata">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="text-custom">Faiz Oranı</label>
+                            <input type="number"
+                                   class="form-control"
+                                   min="1"
+                                   max="3"
+                                   step="0.1"
+                                   value="2.77"
+                                   id="faiz-orani">
+                        </div>
+                        <div class="faiz-hata">
+
+                        </div>
+                        <button class="btn btn-success" type="submit">HESAPLA</button>
+                    </form>
+                </div>
+                <div class="col-md-6 p-4" id="hesapSonuc">
+                    <div class="card none-border mt-5">
+                        <div class="card-body text-center">
+                            <div class="calculation">
+                                <h4>Taksit Tutarı</h4>
+                                <h5 id="taksitTutari">960,09 TL</h5>
+                            </div>
+                            <div class="calculation pt-3">
+                                <h4>Toplam Geri Ödeme Tutarı</h4>
+                                <h5 id="toplamOdemeTutari">34.467.03 TL</h5>
+                            </div>
+                            <div class="calculation pt-3">
+                                <h4>Faiz Oranı</h4>
+                                <h5 id="faizOrani">% 2,77</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
